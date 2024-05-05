@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
+    <title>Guess the number game</title>
+  </head>
+  <body>
+    <nav>
+        <ul class="sidebar">
+            <li  onclick=hideSidebar() style="padding: 0;"><a href="#" style="padding-left: 25px;"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+        <ul >
+            <li class="hideOnMobile" ><img class="hideOnMobile" src="./assets/416506343_759675669389679_4439811303919678915_n.png" alt="" style="height: 5vh; width: 20vw;"></li>
+            <li class="showOnMobile"><img id="logo" src="./assets/logo.png" alt=""></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="aboutUs.html">About Us</a></li>
+            <li class="hideOnMobile"><a href="game.html">Game</a></li>
+            <li class="menuButton" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" ><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Guess the number game</h1>
+        <section class="first">
+            <span id="greet"></span>
+            <img src="./assets/Eyes Cartoon.png" alt="">
+            <p>Can you guess the number in my head ?</p>
+            <form class="form">
+                <input type="text" name="guessField" id="guessField" class="guessField" placeholder="your number" />
+                <button class="guessSubmit" id="submitguess">Guess</button>
+            </form>
+            <p id="lowOrHi"></p>
+            <p id="guesses"></p>
+            <p id="lastResult"></p>
+            <button style="display: none; " id="Restart">Restart Game</button>
+        </section>
+    </main>
+    <script src="./sidebar.js"></script>
+    <script src="./gameLogic.js"></script>
+  </body>
+</html>
